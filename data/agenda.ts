@@ -1,0 +1,27 @@
+export type AgendaBlock = {
+  title: string;
+  time: string;
+  items: string[];
+};
+
+export const dinnerParticipants = ["示例嘉宾 A", "示例嘉宾 B", "示例嘉宾 C"];
+
+export const agendaBlocks: AgendaBlock[] = [
+  {
+    title: "主题分享与交流",
+    time: "14:00～17:30",
+    items: [
+      "自我介绍",
+      "主题分享",
+      "分享｜示例嘉宾 A：从想法到活动页原型的 24 小时实践",
+      "分享｜示例嘉宾 B：如何用 AI 工具整理线下活动工作流",
+      "分享｜示例嘉宾 C：现场协作、内容记录与后续沉淀",
+      "自由交流",
+    ],
+  },
+  {
+    title: "晚餐（按需选择）",
+    time: "18:00～20:00",
+    items: [`参与晚餐：${dinnerParticipants.join("、")}`],
+  },
+];

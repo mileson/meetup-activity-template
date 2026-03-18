@@ -2,31 +2,6 @@
 
 一个基于 Next.js App Router 的小型线下活动全流程模板，适合 meetup、workshop、训练营、私享会等场景。默认提供示例数据与示例凭证素材，你可以直接替换为自己的活动内容。
 
-## 效果预览
-
-![活动首页效果](./public/readme/home.png)
-
-<table>
-  <tr>
-    <td width="50%">
-      <img src="./public/readme/claim.png" alt="通行领取页" />
-    </td>
-    <td width="50%">
-      <img src="./public/readme/review.png" alt="活动回顾页" />
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <strong>通行领取</strong><br />
-      从活动公告直接进入领取流程，按姓名或提交人生成通行凭证。
-    </td>
-    <td>
-      <strong>活动回顾</strong><br />
-      在同一站点内沉淀分享视频、摘要和关键信息，形成活动闭环。
-    </td>
-  </tr>
-</table>
-
 ## 你可以用它做什么
 
 - 活动公告：首页展示时间、地点、议程、亮点说明

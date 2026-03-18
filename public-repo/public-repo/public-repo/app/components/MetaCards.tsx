@@ -18,7 +18,7 @@ const buildGeoFallbackLink = (query: string) =>
 const buildAmapUniversalLink = (query: string, city: string) =>
   `https://uri.amap.com/search?keyword=${encodeURIComponent(
     query
-  )}&city=${encodeURIComponent(city)}&src=meetup-activity&coordinate=gaode&callnative=1`;
+  )}&city=${encodeURIComponent(city)}&src=ai-coding-friends&coordinate=gaode&callnative=1`;
 
 export default function MetaCards({ timeLines, venueLines, city }: MetaCardsProps) {
   const query = useMemo(

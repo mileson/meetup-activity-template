@@ -12,10 +12,10 @@
       <img src="./public/readme/claim.png" alt="通行领取页" />
     </td>
     <td width="33.33%">
-      <img src="./public/readme/review.png" alt="活动回顾页" />
+      <img src="./public/readme/verify.png" alt="凭证核验通过页" />
     </td>
     <td width="33.33%">
-      <img src="./public/readme/verify.png" alt="凭证核验通过页" />
+      <img src="./public/readme/review.png" alt="活动回顾页" />
     </td>
   </tr>
   <tr>
@@ -24,12 +24,12 @@
       从活动公告直接进入领取流程，按姓名或提交人生成通行凭证。
     </td>
     <td>
-      <strong>活动回顾</strong><br />
-      在同一站点内沉淀分享视频、摘要和关键信息，形成活动闭环。
-    </td>
-    <td>
       <strong>现场核验</strong><br />
       扫码进入核验页，快速判断是否放行，模板预览图已对姓名做马赛克。
+    </td>
+    <td>
+      <strong>活动回顾</strong><br />
+      在同一站点内沉淀分享视频、摘要和关键信息，形成活动闭环。
     </td>
   </tr>
 </table>

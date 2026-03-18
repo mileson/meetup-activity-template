@@ -6,7 +6,10 @@ type ShareOrDownloadOptions = {
   onFallback?: (message: string) => void;
 };
 
-export function buildDownloadFilename(name: string | undefined, imageUrl: string) {
+export function buildDownloadFilename(
+  name: string | undefined,
+  imageUrl: string
+) {
   const safeName = (name || "入场凭证").replace(/[\\/:*?"<>|]/g, "_");
   const pathname = imageUrl.split("?")[0] || "";
   const match = pathname.match(/\.([a-zA-Z0-9]+)$/);

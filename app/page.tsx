@@ -18,16 +18,19 @@ export default function Home() {
       <header className="hero">
         <div className="hero-main">
           <div className="hero-left">
-            <h1 className="hero-title">
-              {event.title}
-            </h1>
+            <h1 className="hero-title">{event.title}</h1>
             <p className="hero-sub">{event.summary}</p>
-            <Link
-              className="btn btn-primary hero-cta hero-cta-inline"
-              href="/claim"
-            >
-              {event.cta}
-            </Link>
+            <div className="hero-cta-stack">
+              <Link
+                className="btn btn-primary hero-cta hero-cta-inline"
+                href="/review"
+              >
+                查看示例回顾
+              </Link>
+              <Link className="btn btn-ghost hero-cta-secondary" href="/claim">
+                {event.cta}
+              </Link>
+            </div>
             <MetaCards
               timeLines={timeLines}
               venueLines={venueLines}
@@ -131,9 +134,6 @@ export default function Home() {
         </a>
       </aside>
 
-      <footer className="footer">
-        {event.title} · {event.date} · {event.city}
-      </footer>
     </div>
   );
 }

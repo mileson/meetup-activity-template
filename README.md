@@ -2,6 +2,10 @@
 
 一个基于 Next.js App Router 的小型线下活动全流程模板，适合 meetup、workshop、训练营、私享会等场景。默认提供示例数据与示例凭证素材，你可以直接替换为自己的活动内容。
 
+[效果预览](#readme-section-1) · [给人类的新手级安装教程](#readme-section-2) · [常用页面](#readme-section-4) · [技术栈](#readme-section-6) · [你可以用它做什么](#readme-section-7) · [目录说明](#readme-section-8) · [部署](#readme-section-9)
+
+<a id="readme-section-1"></a>
+
 ## 效果预览
 
 ![活动首页效果](./public/readme/home.png)
@@ -34,21 +38,7 @@
   </tr>
 </table>
 
-## 你可以用它做什么
-
-- 活动公告：首页展示时间、地点、议程、亮点说明
-- 通行领取：按姓名或提交人查询示例凭证
-- 凭证查看：查看与下载通行凭证图片
-- 现场核验：用统一接口校验名单
-- 活动回顾：整理讲者内容、链接与摘要
-
-## 技术栈
-
-- Next.js 16
-- React 19
-- TypeScript
-- Tailwind CSS 4
-- Motion
+<a id="readme-section-2"></a>
 
 ## 给人类的新手级安装教程
 
@@ -81,13 +71,7 @@ npm run lint
 npm run build
 ```
 
-## 常用页面
-
-- `/`：活动首页
-- `/claim`：凭证领取页
-- `/ticket?name=示例用户%20A&submitter=demo-a`：凭证详情页
-- `/check?name=示例用户%20A&submitter=demo-a`：扫码核验页
-- `/review`：分享回顾页
+<a id="readme-section-3"></a>
 
 ## 给 Agent / OpenClaw / 小龙虾 的新手级使用方式
 
@@ -133,6 +117,47 @@ npm run dev
 如果我没有给外链，就先用 example.com 占位。
 ```
 
+<a id="readme-section-4"></a>
+
+## 常用页面
+
+- `/`：活动首页
+- `/claim`：凭证领取页
+- `/ticket?name=示例用户%20A&submitter=demo-a`：凭证详情页
+- `/check?name=示例用户%20A&submitter=demo-a`：扫码核验页
+- `/review`：分享回顾页
+
+<a id="readme-section-5"></a>
+
+## 使用时要注意
+
+- `app/api/verify/route.ts` 默认直接读取 `data/attendees.ts`，这是模板级实现，适合 demo 或小规模活动。
+- 如果你要使用真实名单、二维码核验或批量生成凭证，建议把原始数据放在私有仓库、私有存储或后端服务中，不要直接公开提交。
+- 默认的 `public/credentials/sample.svg` 只是占位素材，正式活动请替换为自己的设计。
+- 如果你扩展了环境变量，记得同步更新 `.env.example`。
+
+<a id="readme-section-6"></a>
+
+## 技术栈
+
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS 4
+- Motion
+
+<a id="readme-section-7"></a>
+
+## 你可以用它做什么
+
+- 活动公告：首页展示时间、地点、议程、亮点说明
+- 通行领取：按姓名或提交人查询示例凭证
+- 凭证查看：查看与下载通行凭证图片
+- 现场核验：用统一接口校验名单
+- 活动回顾：整理讲者内容、链接与摘要
+
+<a id="readme-section-8"></a>
+
 ## 目录说明
 
 ```text
@@ -154,16 +179,13 @@ public/credentials/
   sample.svg               示例凭证素材
 ```
 
-## 使用时要注意
-
-- `app/api/verify/route.ts` 默认直接读取 `data/attendees.ts`，这是模板级实现，适合 demo 或小规模活动。
-- 如果你要使用真实名单、二维码核验或批量生成凭证，建议把原始数据放在私有仓库、私有存储或后端服务中，不要直接公开提交。
-- 默认的 `public/credentials/sample.svg` 只是占位素材，正式活动请替换为自己的设计。
-- 如果你扩展了环境变量，记得同步更新 `.env.example`。
+<a id="readme-section-9"></a>
 
 ## 部署
 
 最简单的方式是部署到 Vercel，也可以部署到任何支持 Next.js 的 Node.js 环境。
+
+<a id="readme-section-10"></a>
 
 ## License
 

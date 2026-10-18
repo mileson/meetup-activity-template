@@ -1,31 +1,8 @@
-<a id="meetup-activity-template"></a>
-
-<div align="center">
-
-# Meetup Activity · 线下活动网站模板
-
-**替换示例内容，搭起公告、凭证与现场协作页面。**
-
-活动页面 · 示例数据 · 凭证素材 · 部署说明
-
-[![中文说明](https://img.shields.io/badge/%E8%AF%B4%E6%98%8E-%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87-059669)](#readme-detail-13)
-[![项目类型](https://img.shields.io/badge/%E9%A1%B9%E7%9B%AE-%E6%A8%A1%E6%9D%BF-6366f1)](#readme-detail-13)
-
-[👀 效果预览](#readme-detail-13) · [✅ 适用场景](#readme-detail-audience) · [🚀 新手安装与首次运行](#readme-detail-15) · [🤖 让 Agent 帮你使用](#readme-detail-17) · [📌 常用页面](#readme-detail-19) · [📖 使用时要注意](#readme-detail-21)
-
-</div>
-
----
+# Meetup Activity Template
 
 一个基于 Next.js App Router 的小型线下活动全流程模板，适合 meetup、workshop、训练营、私享会等场景。默认提供示例数据与示例凭证素材，你可以直接替换为自己的活动内容。
 
-<a id="readme-section-1"></a>
-
-<a id="效果预览"></a>
-
-<a id="readme-detail-13"></a>
-
-## 👀 效果预览
+## 效果预览
 
 ![活动首页效果](./public/readme/home.png)
 
@@ -57,19 +34,23 @@
   </tr>
 </table>
 
-<a id="readme-detail-audience"></a>
+## 你可以用它做什么
 
-## ✅ 适用场景
+- 活动公告：首页展示时间、地点、议程、亮点说明
+- 通行领取：按姓名或提交人查询示例凭证
+- 凭证查看：查看与下载通行凭证图片
+- 现场核验：用统一接口校验名单
+- 活动回顾：整理讲者内容、链接与摘要
 
-适合筹备 meetup、workshop 或训练营的组织者。
+## 技术栈
 
-<a id="readme-section-2"></a>
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS 4
+- Motion
 
-<a id="给人类的新手级安装教程"></a>
-
-<a id="readme-detail-15"></a>
-
-## 🚀 新手安装与首次运行
+## 给人类的新手级安装教程
 
 1. 安装依赖
 
@@ -100,13 +81,15 @@ npm run lint
 npm run build
 ```
 
-<a id="readme-section-3"></a>
+## 常用页面
 
-<a id="给-agent--openclaw--小龙虾-的新手级使用方式"></a>
+- `/`：活动首页
+- `/claim`：凭证领取页
+- `/ticket?name=示例用户%20A&submitter=demo-a`：凭证详情页
+- `/check?name=示例用户%20A&submitter=demo-a`：扫码核验页
+- `/review`：分享回顾页
 
-<a id="readme-detail-17"></a>
-
-## 🤖 让 Agent 帮你使用
+## 给 Agent / OpenClaw / 小龙虾 的新手级使用方式
 
 ### 第一步：安装并跑起来
 
@@ -150,72 +133,7 @@ npm run dev
 如果我没有给外链，就先用 example.com 占位。
 ```
 
-<a id="readme-section-4"></a>
-
-<a id="常用页面"></a>
-
-<a id="readme-detail-19"></a>
-
-## 📌 常用页面
-
-- `/`：活动首页
-- `/claim`：凭证领取页
-- `/ticket?name=示例用户%20A&submitter=demo-a`：凭证详情页
-- `/check?name=示例用户%20A&submitter=demo-a`：扫码核验页
-- `/review`：分享回顾页
-
-<a id="readme-section-5"></a>
-
-<a id="使用时要注意"></a>
-
-<a id="readme-detail-21"></a>
-
-## 📖 使用时要注意
-
-- `app/api/verify/route.ts` 默认直接读取 `data/attendees.ts`，这是模板级实现，适合 demo 或小规模活动。
-- 如果你要使用真实名单、二维码核验或批量生成凭证，建议把原始数据放在私有仓库、私有存储或后端服务中，不要直接公开提交。
-- 默认的 `public/credentials/sample.svg` 只是占位素材，正式活动请替换为自己的设计。
-- 如果你扩展了环境变量，记得同步更新 `.env.example`。
-
-<a id="readme-section-6"></a>
-
-<a id="技术栈"></a>
-
-<a id="readme-detail-23"></a>
-
-## 🏗️ 技术栈
-
-Meetup Activity 的实现按下列技术与模块组织，接入和维护时可据此定位。
-
-- Next.js 16
-- React 19
-- TypeScript
-- Tailwind CSS 4
-- Motion
-
-<a id="readme-section-7"></a>
-
-<a id="你可以用它做什么"></a>
-
-<a id="readme-detail-25"></a>
-
-## 📌 你可以用它做什么
-
-- 活动公告：首页展示时间、地点、议程、亮点说明
-- 通行领取：按姓名或提交人查询示例凭证
-- 凭证查看：查看与下载通行凭证图片
-- 现场核验：用统一接口校验名单
-- 活动回顾：整理讲者内容、链接与摘要
-
-<a id="readme-section-8"></a>
-
-<a id="目录说明"></a>
-
-<a id="readme-detail-27"></a>
-
-## 📁 目录结构
-
-下面按实现职责列出目录位置，便于把修改放回对应模块。
+## 目录说明
 
 ```text
 app/
@@ -236,24 +154,17 @@ public/credentials/
   sample.svg               示例凭证素材
 ```
 
-<a id="readme-section-9"></a>
+## 使用时要注意
 
-<a id="部署"></a>
+- `app/api/verify/route.ts` 默认直接读取 `data/attendees.ts`，这是模板级实现，适合 demo 或小规模活动。
+- 如果你要使用真实名单、二维码核验或批量生成凭证，建议把原始数据放在私有仓库、私有存储或后端服务中，不要直接公开提交。
+- 默认的 `public/credentials/sample.svg` 只是占位素材，正式活动请替换为自己的设计。
+- 如果你扩展了环境变量，记得同步更新 `.env.example`。
 
-<a id="readme-detail-29"></a>
-
-## 📤 部署
+## 部署
 
 最简单的方式是部署到 Vercel，也可以部署到任何支持 Next.js 的 Node.js 环境。
 
-<a id="readme-section-10"></a>
-
-<a id="license"></a>
-
-<a id="许可证"></a>
-
-<a id="readme-detail-31"></a>
-
-## 📄 许可证
+## License
 
 MIT

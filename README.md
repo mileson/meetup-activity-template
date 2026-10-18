@@ -187,6 +187,8 @@ public/credentials/
 
 <a id="readme-section-10"></a>
 
-## License
+<a id="license"></a>
+
+## 许可证
 
 MIT
